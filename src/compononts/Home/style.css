@@ -1,0 +1,14 @@
+.box1 {
+  width: 50%;
+}
+.subContainer {
+  margin-top: 10%;
+}
+.box2 {
+  width: 50%;
+  height: 70vh;
+}
+.subtitle {
+  font-size: 60px;
+  font-weight: bold;
+}

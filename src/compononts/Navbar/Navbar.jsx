@@ -5,11 +5,6 @@ import "../Navbar/Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Navbar() {
-  const active = {
-    fontWeight: "bold",
-    color: "black",
-  };
-
   return (
     <div className="nav">
       <div className="logo">
