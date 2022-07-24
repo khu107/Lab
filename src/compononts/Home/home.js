@@ -16,10 +16,7 @@ export default function Home() {
             praesentium atque dolore optio?
           </span>
         </div>
-
-        <Button variant="primary" size="lg">
-          Large button
-        </Button>
+        <button>Read More</button>
       </div>
     </div>
   );
