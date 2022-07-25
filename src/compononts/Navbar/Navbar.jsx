@@ -20,17 +20,17 @@ function Navbar() {
         </div>
         <div className="item">
           <NavLink to={"/about"} style={{ textDecoration: "none" }}>
-            About us
+            About
           </NavLink>
         </div>
         <div className="item">
           <NavLink to={"/service"} style={{ textDecoration: "none" }}>
-            Services
+            Portal
           </NavLink>
         </div>
         <div className="item">
           <NavLink to={"/news"} style={{ textDecoration: "none" }}>
-            News
+            OHDEP
           </NavLink>
         </div>
         <div className="item">

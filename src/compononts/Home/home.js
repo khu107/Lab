@@ -16,7 +16,7 @@ export default function Home() {
             praesentium atque dolore optio?
           </span>
         </div>
-        <button>Read More</button>
+        <button>Login</button>
       </div>
     </div>
   );
