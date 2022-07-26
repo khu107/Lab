@@ -6,6 +6,7 @@ import News from "../compononts/News/news.js";
 import Contact from "../compononts/Contact/contact.js";
 import Service from "../compononts/Service/service.js";
 import { Routes, Route } from "react-router-dom";
+import Login from "../compononts/Login/Login.jsx";
 
 export default function Root() {
   return (
@@ -18,6 +19,7 @@ export default function Root() {
         <Route path="/service" element={<Service />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </div>
   );

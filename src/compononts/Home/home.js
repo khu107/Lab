@@ -1,6 +1,12 @@
 import React from "react";
 import "../../compononts/Home/style.css";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const LinkStyle = styled(Link)`
+  text-decoration: none;
+`;
 export default function Home() {
   return (
     <div className="container">
@@ -16,7 +22,9 @@ export default function Home() {
             praesentium atque dolore optio?
           </span>
         </div>
-        <button>Login</button>
+        <LinkStyle to={"/Login"}>
+          <button>Login</button>
+        </LinkStyle>
       </div>
     </div>
   );
