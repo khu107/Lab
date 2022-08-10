@@ -1,30 +1,40 @@
 import React from "react";
 import "../Login/style.css";
-import { Container, Col, Row, Form, Button } from "react-bootstrap";
 
 export default function Login() {
   return (
     <>
-      <Container style={{ marginTop: "200px" }}>
-        <Row>
-          <Col lg={4} md={5} sm={12}>
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="email" placeholder="Enter email" />
-              </Form.Group>
-
-              <Form.Group className="mb-1" controlId="formBasicPassword">
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group>
-
-              <Button variant="black" type="submit">
-                Submit
-              </Button>
-            </Form>
-          </Col>
-          <Col lg={4} md={5} sm={12}></Col>
-        </Row>
-      </Container>
+      <div className="con">
+        <div className="navbar">
+          <ul>
+            <li className="title-bold">Navbar</li>
+            <li>Home</li>
+            <li>General Health Status</li>
+            <li>Activity Status</li>
+            <li>Stroke Prediction</li>
+            <li>Alzheiner Prediction</li>
+            <li>About</li>
+          </ul>
+        </div>
+        <div className="title">
+          <h1>OHDEP::Open Health Data Exchange Platform</h1>
+          <p>OHDEP기반 개인 건강정보 통합 포탈 서비스 입니다.</p>
+        </div>
+        <div className="user">
+          <div className="itemm">
+            <div className="img">
+              <img src="" alt="" />
+            </div>
+            <div className="user_info">
+              <h3>김길동</h3>
+            </div>
+          </div>
+          <div className="itemm">2</div>
+          <div className="itemm">3</div>
+          <div className="itemm">4</div>
+          <div className="itemm">5</div>
+        </div>
+      </div>
     </>
   );
 }

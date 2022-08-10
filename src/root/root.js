@@ -12,9 +12,9 @@ export default function Root() {
   return (
     <div className="Root">
       <Navbar />
-      <Routes>
+
+      <Routes element={<Navbar />}>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
         <Route path="/news" element={<News />} />
