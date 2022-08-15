@@ -1,0 +1,43 @@
+.wrapper {
+  height: 100%;
+  background-color: green;
+  color: white;
+}
+
+.img {
+  height: 50%;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row + .row {
+  margin-top: 12px;
+}
+
+.tag {
+  background-color: black;
+  padding: 0px 8px;
+  border-radius: 25px;
+}
+
+.tag.blue {
+  background-color: blue;
+}
+
+.tag.yellow {
+  background-color: #ffc107;
+}

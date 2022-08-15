@@ -1,0 +1,20 @@
+.wrapper {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn {
+  background-color: #1c92d2;
+  padding: 0 20px;
+  color: white;
+  border-radius: 5px;
+}
+.inputt {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid black;
+}

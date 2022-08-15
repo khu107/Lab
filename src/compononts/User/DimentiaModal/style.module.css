@@ -1,0 +1,32 @@
+.wrapper {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.body {
+
+}
+
+.carouselBody {
+ display: flex;
+ flex-direction: column ;
+ height: 300px;
+}
+
+.carouselBody img {
+  width: 100%;
+}
+
+.content {
+  color: white;
+  display: flex;
+  margin-top: 18px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
