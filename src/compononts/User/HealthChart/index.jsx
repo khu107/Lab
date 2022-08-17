@@ -1,6 +1,9 @@
 import styles from "./style.module.css";
 import { Modal } from "antd";
 import Stepschart from "./Stepschart";
+import WeightChart from "./WeightChart";
+import StressChart from "./StressChart";
+
 const customStyles = {
   content: {
     top: "50%",
@@ -23,7 +26,7 @@ const contentStyle = {
 function HealthChart({ visibe, onClose }) {
   return (
     <Modal
-      width={900}
+      width={1000}
       title="기초 건강 관리 상태"
       visible={visibe}
       onCancel={onClose}
@@ -31,10 +34,10 @@ function HealthChart({ visibe, onClose }) {
       footer={null}
     >
       <div>
-        <div className="body">
-          <div>
-            <Stepschart />
-          </div>
+        <div className={styles.body}>
+          <Stepschart />
+          <WeightChart />
+          <StressChart />
         </div>
       </div>
     </Modal>

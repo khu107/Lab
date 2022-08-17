@@ -13,48 +13,42 @@ import {
 const data = [
   {
     name: "1일",
-    steps: 2400,
+    value: 60,
   },
   {
     name: "2일",
-    steps: 1398,
+    value: 63,
   },
   {
     name: "3일",
-    steps: 9800,
+    value: 65,
   },
   {
     name: "4일",
-    steps: 3908,
+    value: 67,
   },
   {
     name: "5일",
-    steps: 4800,
+    value: 0,
   },
   {
     name: "6일",
-    steps: 3800,
+    value: 66,
   },
   {
     name: "7일",
-    steps: 4300,
+    value: 65,
   },
 ];
 
-export default function Stepschart() {
-  const _data = data.map((data) =>
-    data.steps >= 3000
-      ? { ...data, steps: 3000, stepsSeconds: data.steps - 3000 }
-      : data
-  );
-
+export default function WeightChart() {
   return (
     <div className={styles.body}>
-      <h4>걸음</h4>
+      <h4>체중</h4>
       <BarChart
         width={300}
         height={300}
-        data={_data}
+        data={data}
         margin={{
           top: 5,
           right: 30,
@@ -66,8 +60,7 @@ export default function Stepschart() {
         <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
-        <Bar dataKey="steps" fill="blue" stackId="a" />
-        <Bar dataKey="stepsSeconds" fill="#d92130" stackId="a" />
+        <Bar dataKey="value" fill="blue" stackId="a" />
       </BarChart>
     </div>
   );
