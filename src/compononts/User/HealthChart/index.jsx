@@ -26,7 +26,7 @@ const contentStyle = {
 function HealthChart({ visibe, onClose }) {
   return (
     <Modal
-      width={1000}
+      width={950}
       title="기초 건강 관리 상태"
       visible={visibe}
       onCancel={onClose}
