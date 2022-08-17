@@ -7,15 +7,10 @@
   gap: 12px;
 }
 
-
-.body {
-
-}
-
 .carouselBody {
- display: flex;
- flex-direction: column ;
- height: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
 }
 
 .carouselBody img {

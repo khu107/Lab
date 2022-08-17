@@ -6,10 +6,12 @@ import Brain2 from "../../asset/brain2.png";
 import ResultUser from "./ResultUser";
 import { useState } from "react";
 import DimentiaModal from "./DimentiaModal";
+import HealthChart from "./HealthChart";
 
 export default function User() {
   const user = useSelector((state) => state.user);
   const [dementiaVisible, setDementiaVisible] = useState(false);
+  const [healthchat, setHealthchat] = useState(false);
 
   console.log({ dementiaVisible });
 
@@ -53,6 +55,10 @@ export default function User() {
               header="기초 건강 관리 상태"
               detailButtonText="상세보기"
               title={user.health.title}
+              onDetailButtonClick={() => {
+                console.log("?");
+                setHealthchat(true);
+              }}
               body={
                 <div className={styles.resultBody}>
                   <div className={styles.row}>
@@ -153,6 +159,7 @@ export default function User() {
         visibe={dementiaVisible}
         onClose={() => setDementiaVisible(false)}
       />
+      <HealthChart visibe={healthchat} onClose={() => setHealthchat(false)} />
     </>
   );
 }
