@@ -8,6 +8,7 @@
   background-color: darkslategray;
   height: 50px;
 }
+
 .navbar ul {
   padding: 0;
   display: flex;
@@ -28,6 +29,9 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding: 0 20px;
+
+
+
 }
 
 .itemm {
@@ -56,4 +60,37 @@ li {
   margin-left: 20px;
   margin-top: 80px;
   margin-bottom: 30px;
+}
+
+.foot {
+  background-color: darkslategray;
+  margin-top: 20px;
+  padding: 0 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footlogo {
+
+  display: flex;
+
+}
+
+.footlogo img {
+  width: 150;
+  height: 70px;
+  margin-right: 100px;
+}
+
+.foottit {
+  margin-top: 17px;
+  font-size: 12px;
+  text-align: center;
+
+}
+
+.foottit p {
+  margin: 0;
+  color: rgb(238, 233, 233);
 }

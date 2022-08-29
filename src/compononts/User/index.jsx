@@ -7,6 +7,7 @@ import ResultUser from "./ResultUser";
 import { useState } from "react";
 import DimentiaModal from "./DimentiaModal";
 import HealthChart from "./HealthChart";
+import foot from "../../asset/foot.png";
 
 export default function User() {
   const user = useSelector((state) => state.user);
@@ -153,6 +154,15 @@ export default function User() {
             />
           </div>
         </div>
+        <footer className={styles.foot}>
+              <div className={styles.footlogo}>
+                <img src={foot} alt="gachon"></img>
+                <div className={styles.foottit}>
+                  <p>글로벌캠퍼스 : (13120) 경기도 성남시 수정구 성남대로 1342 TEL.031-000-000</p>
+                  <p>© 2021 Gachon University. All Rights Reserved</p>
+                </div>
+              </div>
+        </footer>
       </div>
       <DimentiaModal
         name={user.state.name}
@@ -160,6 +170,7 @@ export default function User() {
         onClose={() => setDementiaVisible(false)}
       />
       <HealthChart visibe={healthchat} onClose={() => setHealthchat(false)} />
+      
     </>
   );
 }
