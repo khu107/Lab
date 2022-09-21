@@ -1,13 +1,13 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import ResultCard from "./ResultCard";
-import styles from "./style.module.css";
-import Brain2 from "../../asset/brain2.png";
-import ResultUser from "./ResultUser";
-import { useState } from "react";
-import DimentiaModal from "./DimentiaModal";
-import HealthChart from "./HealthChart";
-import foot from "../../asset/foot.png";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import ResultCard from './ResultCard';
+import styles from './style.module.css';
+import Brain2 from '../../asset/brain2.png';
+import ResultUser from './ResultUser';
+import { useState } from 'react';
+import DimentiaModal from './DimentiaModal';
+import HealthChart from './HealthChart';
+import foot from '../../asset/foot.png';
 
 export default function User() {
   const user = useSelector((state) => state.user);
@@ -21,7 +21,7 @@ export default function User() {
       <div className={styles.con}>
         <div className={styles.navbar}>
           <ul>
-            <li className={styles["title-bold"]}>Navbar</li>
+            <li className={styles['title-bold']}>Navbar</li>
             <li>Home</li>
             <li>General Health Status</li>
             <li>Activity Status</li>
@@ -31,10 +31,10 @@ export default function User() {
           </ul>
         </div>
         <div className={styles.title}>
-          <h1 style={{ color: "white" }}>
+          <h1 style={{ color: 'white' }}>
             OHDEP::Open Health Data Exchange Platform
           </h1>
-          <p style={{ color: "white" }}>
+          <p style={{ color: 'white' }}>
             OHDEP기반 개인 건강정보 통합 포탈 서비스 입니다.
           </p>
         </div>
@@ -52,12 +52,12 @@ export default function User() {
           </div>
           <div className={styles.itemm}>
             <ResultCard
-              style={{ backgroundColor: "#368ee6" }}
+              style={{ backgroundColor: '#368ee6' }}
               header="기초 건강 관리 상태"
               detailButtonText="상세보기"
               title={user.health.title}
               onDetailButtonClick={() => {
-                console.log("?");
+                console.log('?');
                 setHealthchat(true);
               }}
               body={
@@ -81,7 +81,7 @@ export default function User() {
           </div>
           <div className={styles.itemm}>
             <ResultCard
-              style={{ backgroundColor: "green" }}
+              style={{ backgroundColor: 'green' }}
               header="운동 상태"
               title={user.exercise.title}
               detailButtonText="상세보기"
@@ -106,7 +106,7 @@ export default function User() {
           </div>
           <div className={styles.itemm}>
             <ResultCard
-              style={{ backgroundColor: "tomato" }}
+              style={{ backgroundColor: 'tomato' }}
               header="노질환 예직"
               detailButtonText="데이터 선택"
               title={user.brain.title}
@@ -131,12 +131,12 @@ export default function User() {
           </div>
           <div className={styles.itemm}>
             <ResultCard
-              style={{ backgroundColor: "#ffc107" }}
+              style={{ backgroundColor: '#ffc107' }}
               header="치매 예측"
               detailButtonText="데이터 선택"
               title={user.brain.title}
               onDetailButtonClick={() => {
-                console.log("?");
+                console.log('?');
                 setDementiaVisible(true);
               }}
               body={
@@ -155,13 +155,14 @@ export default function User() {
           </div>
         </div>
         <footer className={styles.foot}>
-              <div className={styles.footlogo}>
-                <img src={foot} alt="gachon"></img>
-                <div className={styles.foottit}>
-                  <p>글로벌캠퍼스 : (13120) 경기도 성남시 수정구 성남대로 1342 TEL.031-000-000</p>
-                  <p>© 2021 Gachon University. All Rights Reserved</p>
-                </div>
-              </div>
+          <div className={styles.footlogo}>
+            <img src={foot} alt="gachon"></img>
+            <div className={styles.foottit}>
+              <p>© 2022 HIT Lab, Gachon University</p>
+              <p>* Powered by OHDEPOpen Health Data eXchange Platform</p>
+              <p>Contact: hwanghj@gachon.ac.kr</p>
+            </div>
+          </div>
         </footer>
       </div>
       <DimentiaModal
@@ -170,7 +171,6 @@ export default function User() {
         onClose={() => setDementiaVisible(false)}
       />
       <HealthChart visibe={healthchat} onClose={() => setHealthchat(false)} />
-      
     </>
   );
 }

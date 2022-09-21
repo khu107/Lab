@@ -84,6 +84,8 @@ li {
 }
 
 .foottit {
+  display: flex;
+  align-items: center;
   margin-top: 17px;
   font-size: 12px;
   text-align: center;
@@ -91,6 +93,6 @@ li {
 }
 
 .foottit p {
-  margin: 0;
+  margin-left: 100px;
   color: rgb(238, 233, 233);
 }
