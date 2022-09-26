@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./style.module.css";
+import React from 'react';
+import styles from './style.module.css';
 import {
   BarChart,
   Bar,
@@ -8,43 +8,47 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from "recharts";
+} from 'recharts';
 
 const data = [
   {
-    name: "1일",
-    steps: 2400,
+    name: '1일',
+    기본걸음: 5150,
   },
   {
-    name: "2일",
-    steps: 1398,
+    name: '2일',
+    기본걸음: 3008,
   },
   {
-    name: "3일",
-    steps: 9800,
+    name: '3일',
+    기본걸음: 6500,
   },
   {
-    name: "4일",
-    steps: 3908,
+    name: '4일',
+    기본걸음: 4508,
   },
   {
-    name: "5일",
-    steps: 4800,
+    name: '5일',
+    기본걸음: 7500,
   },
   {
-    name: "6일",
-    steps: 3800,
+    name: '6일',
+    기본걸음: 7000,
   },
   {
-    name: "7일",
-    steps: 4300,
+    name: '7일',
+    기본걸음: 300,
   },
 ];
 
 export default function Stepschart() {
   const _data = data.map((data) =>
-    data.steps >= 3000
-      ? { ...data, steps: 3000, stepsSeconds: data.steps - 3000 }
+    data.기본걸음 >= 3000
+      ? {
+          ...data,
+          기본걸음: 3000,
+          죄고의걸음: data.기본걸음 - 3000,
+        }
       : data
   );
 
@@ -52,8 +56,8 @@ export default function Stepschart() {
     <div className={styles.body}>
       <h4>걸음</h4>
       <BarChart
-        width={300}
-        height={300}
+        width={580}
+        height={500}
         data={_data}
         margin={{
           top: 5,
@@ -61,13 +65,20 @@ export default function Stepschart() {
           left: 20,
           bottom: 5,
         }}
-        barSize={10}
+        barSize={20}
       >
         <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
         <YAxis />
-        <CartesianGrid strokeDasharray="3 3" />
-        <Bar dataKey="steps" fill="blue" stackId="a" />
-        <Bar dataKey="stepsSeconds" fill="#d92130" stackId="a" />
+        <Legend />
+        <CartesianGrid strokeDasharray="3" />
+        <Tooltip dataKey="기본걸음" />
+        <Bar dataKey="기본걸음" fill="blue" stackId="a" />
+        <Bar
+          label={{ position: 'top' }}
+          dataKey="죄고의걸음"
+          fill="#d92130"
+          stackId="a"
+        />
       </BarChart>
     </div>
   );
