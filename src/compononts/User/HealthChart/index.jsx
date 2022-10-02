@@ -3,29 +3,12 @@ import { Modal } from 'antd';
 import Stepschart from './Stepschart';
 import WeightChart from './WeightChart';
 import StressChart from './StressChart';
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
-
-const contentStyle = {
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
+import { Link } from 'react-router-dom';
 
 function HealthChart({ visibe, onClose }) {
   return (
     <Modal
+      className={styles.main}
       width={1800}
       title="기초 건강 관리 상태"
       visible={visibe}
@@ -36,7 +19,9 @@ function HealthChart({ visibe, onClose }) {
       <div>
         <div className={styles.body}>
           <Stepschart />
+
           <WeightChart />
+
           <StressChart />
         </div>
       </div>

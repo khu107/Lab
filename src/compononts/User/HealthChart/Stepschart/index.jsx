@@ -54,7 +54,6 @@ export default function Stepschart() {
 
   return (
     <div className={styles.body}>
-      <h4>걸음</h4>
       <BarChart
         width={580}
         height={500}
@@ -68,7 +67,7 @@ export default function Stepschart() {
         barSize={20}
       >
         <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
-        <YAxis />
+        <YAxis type="number" domain={[1000, 10000]} />
         <Legend />
         <CartesianGrid strokeDasharray="3" />
         <Tooltip dataKey="기본걸음" />
