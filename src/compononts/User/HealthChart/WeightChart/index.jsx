@@ -41,7 +41,7 @@ const CustomizedLabel = (props) => {
 export default function WeightChart() {
   return (
     <div className={styles.body}>
-      <h4>체중</h4>
+      <h4 style={{ color: '#0088FE' }}>체중</h4>
 
       <LineChart
         width={580}

@@ -3,7 +3,8 @@ import { Modal } from 'antd';
 import Stepschart from './Stepschart';
 import WeightChart from './WeightChart';
 import StressChart from './StressChart';
-import { Link } from 'react-router-dom';
+import TodayStep from './Stepschart/TodayStep';
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 
 function HealthChart({ visibe, onClose }) {
   return (
@@ -18,10 +19,31 @@ function HealthChart({ visibe, onClose }) {
     >
       <div>
         <div className={styles.body}>
-          <Stepschart />
+          <nav className={styles.nav}>
+            <span className={styles.item}>
+              <NavLink to={'/user/1'} style={{ textDecoration: 'none' }}>
+                당일
+              </NavLink>
+            </span>
+            <span className={styles.item}>
+              <NavLink to={'/user/2'} style={{ textDecoration: 'none' }}>
+                주별
+              </NavLink>
+            </span>
+            <span className={styles.item}>
+              <NavLink to={'/user/3'} style={{ textDecoration: 'none' }}>
+                월별
+              </NavLink>
+            </span>
+
+            <Routes>
+              <Route path="1" element={<TodayStep />} />
+              <Route path="2" element={<Stepschart />} />
+              <Route path="3" element={<Stepschart />} />
+            </Routes>
+          </nav>
 
           <WeightChart />
-
           <StressChart />
         </div>
       </div>
