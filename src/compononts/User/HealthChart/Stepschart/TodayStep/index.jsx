@@ -85,8 +85,8 @@ export default function App() {
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
         data={data}
-        cx={200}
-        cy={200}
+        cx={250}
+        cy={230}
         innerRadius={60}
         outerRadius={80}
         fill="#8884d8"

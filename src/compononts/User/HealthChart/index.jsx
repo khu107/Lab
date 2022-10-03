@@ -4,6 +4,8 @@ import Stepschart from './Stepschart';
 import WeightChart from './WeightChart';
 import StressChart from './StressChart';
 import TodayStep from './Stepschart/TodayStep';
+import MonthStep from './Stepschart/MonthStep';
+
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 
 function HealthChart({ visibe, onClose }) {
@@ -21,8 +23,8 @@ function HealthChart({ visibe, onClose }) {
         <div className={styles.body}>
           <nav className={styles.nav}>
             <span className={styles.item}>
-              <NavLink to={'/user/1'} style={{ textDecoration: 'none' }}>
-                당일
+              <NavLink to={'/user'} style={{ textDecoration: 'none' }}>
+                오늘
               </NavLink>
             </span>
             <span className={styles.item}>
@@ -37,9 +39,9 @@ function HealthChart({ visibe, onClose }) {
             </span>
 
             <Routes>
-              <Route path="1" element={<TodayStep />} />
+              <Route path="/" element={<TodayStep />} />
               <Route path="2" element={<Stepschart />} />
-              <Route path="3" element={<Stepschart />} />
+              <Route path="3" element={<MonthStep />} />
             </Routes>
           </nav>
 
