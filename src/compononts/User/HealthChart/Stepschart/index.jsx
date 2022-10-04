@@ -47,7 +47,7 @@ export default function Stepschart() {
       ? {
           ...data,
           기본걸음: 3000,
-          죄고의걸음: data.기본걸음 - 3000,
+          오늘의걸음: data.기본걸음 - 3000,
         }
       : data
   );
@@ -74,7 +74,7 @@ export default function Stepschart() {
         <Bar dataKey="기본걸음" fill="#0088FE" stackId="a" />
         <Bar
           label={{ position: 'top' }}
-          dataKey="죄고의걸음"
+          dataKey="오늘의걸음"
           fill="#00C49F"
           stackId="a"
         />
