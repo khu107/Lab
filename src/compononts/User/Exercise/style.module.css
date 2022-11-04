@@ -1,0 +1,13 @@
+.body {
+  display: flex;
+}
+.nav{
+  
+  
+}
+.item{
+  font-size: 23px;
+  font-weight: bold;
+  padding-left: 100px;
+  
+}

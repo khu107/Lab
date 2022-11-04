@@ -8,11 +8,13 @@ import { useState } from 'react';
 import DimentiaModal from './DimentiaModal';
 import HealthChart from './HealthChart';
 import foot from '../../asset/foot.png';
+import Exercise from './Exercise';
 
 export default function User() {
   const user = useSelector((state) => state.user);
   const [dementiaVisible, setDementiaVisible] = useState(false);
   const [healthchat, setHealthchat] = useState(false);
+  const [exercise, setExercise] = useState(false);
 
   console.log({ dementiaVisible });
 
@@ -85,6 +87,10 @@ export default function User() {
               header="운동 상태"
               title={user.exercise.title}
               detailButtonText="상세보기"
+              onDetailButtonClick={() => {
+                console.log('?');
+                setExercise(true);
+              }}
               body={
                 <div className={styles.resultBody}>
                   <div className={styles.row}>
@@ -175,6 +181,7 @@ export default function User() {
         onClose={() => setDementiaVisible(false)}
       />
       <HealthChart visibe={healthchat} onClose={() => setHealthchat(false)} />
+      <Exercise visibe={exercise} onClose={() => setExercise(false)} />
     </>
   );
 }
