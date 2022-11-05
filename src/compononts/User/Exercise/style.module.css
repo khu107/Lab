@@ -1,13 +1,11 @@
-.body {
+.shimbak h3 {
+  text-align: center;
+  width: 30%;
+}
+.vaqt {
   display: flex;
-}
-.nav{
-  
-  
-}
-.item{
-  font-size: 23px;
-  font-weight: bold;
-  padding-left: 100px;
-  
+  width: 30%;
+  justify-content: space-between;
+
+  padding-left: 60px;
 }
