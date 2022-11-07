@@ -1,11 +1,33 @@
 .shimbak h3 {
   text-align: center;
-  width: 30%;
+
+  color: blue;
 }
 .vaqt {
   display: flex;
-  width: 30%;
   justify-content: space-between;
-
   padding-left: 60px;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.shimbak {
+  width: 500px;
+}
+.calorie {
+  width: 500px;
+}
+.calorie h3 {
+  text-align: center;
+  color: blue;
+}
+.worouts {
+  width: 500px;
+}
+
+.worouts h3 {
+  text-align: center;
+  color: blue;
 }

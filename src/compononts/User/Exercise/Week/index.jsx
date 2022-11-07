@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+
 import {
   Label,
   LineChart,
@@ -12,21 +13,21 @@ import {
 } from 'recharts';
 
 const initialData = [
-  { name: 1, 심박수: 75, impression: 150 },
+  { name: 1, 심박수: 63, impression: 150 },
   { name: 2, 심박수: 65, impression: 120 },
-  { name: 3, 심박수: 73, impression: 150 },
+  { name: 3, 심박수: 67, impression: 150 },
   { name: 4, 심박수: 67, impression: 180 },
   { name: 5, 심박수: 70, impression: 200 },
   { name: 6, 심박수: 67, impression: 499 },
   { name: 7, 심박수: 72, impression: 50 },
   { name: 8, 심박수: 75, impression: 100 },
-  { name: 9, 심박수: 69, impression: 200 },
-  { name: 10, 심박수: 65, impression: 222 },
+  { name: 9, 심박수: 69, impression: 100 },
+  { name: 10, 심박수: 65, impression: 100 },
   { name: 11, 심박수: 73, impression: 210 },
   { name: 12, 심박수: 64, impression: 300 },
   { name: 13, 심박수: 75, impression: 50 },
-  { name: 14, 심박수: 72, impression: 190 },
-  { name: 15, 심박수: 61, impression: 300 },
+  { name: 14, 심박수: 72, impression: 100 },
+  { name: 15, 심박수: 64, impression: 300 },
   { name: 16, 심박수: 79, impression: 400 },
   { name: 17, 심박수: 73, impression: 200 },
   { name: 18, 심박수: 70, impression: 50 },
@@ -39,7 +40,7 @@ const initialData = [
   { name: 26, 심박수: 71, impression: 100 },
   { name: 27, 심박수: 61, impression: 100 },
   { name: 28, 심박수: 65, impression: 100 },
-  { name: 29, 심박수: 75, impression: 100 },
+  { name: 29, 심박수: 65, impression: 100 },
 ];
 
 const getAxisYDomain = (from, to, ref, offset) => {
@@ -96,7 +97,7 @@ export default class Example extends PureComponent {
       refAreaLeft,
       refAreaRight,
       'impression',
-      50
+      30
     );
 
     this.setState(() => ({
@@ -131,9 +132,9 @@ export default class Example extends PureComponent {
         className="highlight-bar-charts"
         style={{ userSelect: 'none', width: '100%' }}
       >
-        <ResponsiveContainer width="30%" height={400}>
+        <ResponsiveContainer height={400}>
           <LineChart
-            width={800}
+            width={500}
             height={400}
             data={data}
             onMouseDown={(e) => this.setState({ refAreaLeft: e.activeLabel })}
@@ -157,7 +158,7 @@ export default class Example extends PureComponent {
               yAxisId="1"
               type="natural"
               dataKey="심박수"
-              stroke="orange"
+              stroke="blue"
               animationDuration={300}
             />
           </LineChart>
