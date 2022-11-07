@@ -62,7 +62,7 @@ export default function Stepschart() {
         <Bar
           dataKey="칼로리"
           label={{ position: 'top' }}
-          fill="#0088FE"
+          fill="#413ea0"
           stackId="a"
         />
       </BarChart>

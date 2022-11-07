@@ -9,29 +9,28 @@ import {
   Tooltip,
   Legend,
   Area,
+  LabelList,
+  Label,
 } from 'recharts';
 
 const data = [
   {
     name: '걷기',
-    uv: 590,
-    pv: 800,
+    uv: 6000,
+    pv: 6000,
     amt: 1400,
-    cnt: 490,
   },
   {
     name: '달리기',
-    uv: 868,
-    pv: 967,
+    uv: 12000,
+    pv: 12000,
     amt: 1506,
-    cnt: 590,
   },
   {
     name: '헬스',
     uv: 30,
     pv: 30,
     amt: 989,
-    cnt: 350,
   },
 ];
 
@@ -49,8 +48,7 @@ export default function App() {
         left: 20,
       }}
     >
-      <CartesianGrid stroke="#f5f5f5" />
-      <XAxis type="number" dataKey="amt" />
+      <XAxis type="number" />
       <YAxis dataKey="name" type="category" />
 
       <Bar dataKey="pv" barSize={20} fill="#413ea0" />
