@@ -50,6 +50,8 @@ const mriDetails = [
 
 function DimentiaModal({ name, visibe, onClose }) {
   const [dotPosition, setDotPosition] = useState('left');
+  const [isSelectImage, setSelectImage] = useState(false);
+  const [clickIdStore, setClickIdStore] = useState(0);
 
   return (
     <Modal
@@ -63,31 +65,41 @@ function DimentiaModal({ name, visibe, onClose }) {
     >
       <div>
         <div className="body">
-          <Carousel dotPosition={dotPosition}>
-            {mriDetails.map(({ img, date, content, id }) => {
-              return (
-                <div
-                  key={id}
-                  style={contentStyle}
-                  className={styles.carouselBody}
-                >
-                  <img src={img} alt="brain" />
-                  <div className={styles.content}>
-                    <div>{date}</div>
-                    <div>{content}</div>
-                  </div>
-
-                  <Button
-                    onClick={() => {}}
-                    className={styles.btn}
-                    variant="success"
+          {isSelectImage ? (
+            <Demin1
+              cancelView={() => setSelectImage(false)}
+              activeId={clickIdStore}
+            />
+          ) : (
+            <Carousel dotPosition={dotPosition}>
+              {mriDetails.map(({ img, date, content, id }) => {
+                return (
+                  <div
+                    key={id}
+                    style={contentStyle}
+                    className={styles.carouselBody}
                   >
-                    데이터등록
-                  </Button>
-                </div>
-              );
-            })}
-          </Carousel>
+                    <img src={img} alt="brain" />
+                    <div className={styles.content}>
+                      <div>{date}</div>
+                      <div>{content}</div>
+                    </div>
+
+                    <Button
+                      onClick={() => {
+                        setClickIdStore(id);
+                        setSelectImage(true);
+                      }}
+                      className={styles.btn}
+                      variant="success"
+                    >
+                      데이터등록
+                    </Button>
+                  </div>
+                );
+              })}
+            </Carousel>
+          )}
         </div>
       </div>
     </Modal>
