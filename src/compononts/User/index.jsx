@@ -162,15 +162,13 @@ export default function User() {
         </div>
         <footer className={styles.foot}>
           <div className={styles.footlogo}>
-            <img src={foot} alt="gachon"></img>
             <div className={styles.foottit}>
               <div>
                 <p>© 2022 HIT Lab, Gachon University</p>
                 <p>Powered by OHDEPOpen Health Data eXchange Platform</p>
-              </div>
-              <div>
                 <p>Contact: hwanghj@gachon.ac.kr</p>
               </div>
+              <img src={foot} alt="gachon"></img>
             </div>
           </div>
         </footer>
