@@ -54,7 +54,7 @@ export default function Stepschart() {
           left: 20,
           bottom: 5,
         }}
-        barSize={30}
+        barSize={20}
       >
         <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
 
@@ -62,7 +62,7 @@ export default function Stepschart() {
         <Bar
           dataKey="칼로리"
           label={{ position: 'top' }}
-          fill="#413ea0"
+          fill="#8884d8"
           stackId="a"
         />
       </BarChart>
