@@ -1,4 +1,4 @@
-.shimbak h4 {
+.shimbak h6 {
   text-align: center;
 
   color: blue;
@@ -19,7 +19,7 @@
 .calorie {
   width: 500px;
 }
-.calorie h4 {
+.calorie h6 {
   text-align: center;
   color: blue;
 }
@@ -27,7 +27,7 @@
   width: 500px;
 }
 
-.worouts h4 {
+.worouts h6 {
   text-align: center;
   color: blue;
 }

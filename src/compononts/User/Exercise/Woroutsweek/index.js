@@ -13,43 +13,43 @@ const data = [
   {
     name: '월',
     uv: 4000,
-    심박수: 79,
+    운동: 7000,
     amt: 2400,
   },
   {
     name: '화',
     uv: 3000,
-    심박수: 75,
+    운동: 1,
     amt: 2210,
   },
   {
     name: '수',
     uv: 2000,
-    심박수: 95,
+    운동: 6000,
     amt: 2290,
   },
   {
     name: '목',
     uv: 2780,
-    심박수: 78,
+    운동: 1,
     amt: 2000,
   },
   {
     name: '금',
     uv: 1890,
-    심박수: 62,
+    운동: 7000,
     amt: 2181,
   },
   {
     name: '토',
     uv: 2390,
-    심박수: 90,
+    운동: 0,
     amt: 2500,
   },
   {
     name: '일',
     uv: 3490,
-    심박수: 85,
+    운동: 6800,
     amt: 2100,
   },
 ];
@@ -57,8 +57,8 @@ const data = [
 export default function App() {
   return (
     <BarChart
-      width={520}
-      height={430}
+      width={500}
+      height={440}
       data={data}
       margin={{
         top: 5,
@@ -69,16 +69,11 @@ export default function App() {
       barSize={20}
     >
       <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
-      <YAxis type="number" domain={[40, 120]} />
+
       <Tooltip />
 
       <CartesianGrid strokeDasharray="3 3" />
-      <Bar
-        label={{ position: 'top' }}
-        dataKey="심박수"
-        fill="#8884d8"
-        background={{ fill: '#eee' }}
-      />
+      <Bar dataKey="운동" fill="#8884d8" background={{ fill: '#eee' }} />
     </BarChart>
   );
 }
