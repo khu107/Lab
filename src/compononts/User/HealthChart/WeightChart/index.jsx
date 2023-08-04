@@ -44,7 +44,7 @@ export default function WeightChart() {
       <h4 style={{ color: '#0088FE' }}>체중</h4>
 
       <LineChart
-        width={580}
+        width={460}
         height={500}
         data={data}
         margin={{

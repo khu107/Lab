@@ -55,7 +55,7 @@ export default function Stepschart() {
   return (
     <div className={styles.body}>
       <BarChart
-        width={580}
+        width={450}
         height={500}
         data={_data}
         margin={{

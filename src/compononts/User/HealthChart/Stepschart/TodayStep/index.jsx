@@ -80,7 +80,7 @@ export default function App() {
   );
 
   return (
-    <PieChart width={580} height={500}>
+    <PieChart width={480} height={500}>
       <Pie
         activeIndex={activeIndex}
         activeShape={renderActiveShape}

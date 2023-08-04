@@ -11,7 +11,6 @@ import Workoutsweek from '../Exercise/Woroutsweek';
 
 const Title = styled.div`
   display: flex;
-
   justify-content: center;
   grid-gap: 50px;
 `;

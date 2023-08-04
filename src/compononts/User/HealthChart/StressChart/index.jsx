@@ -89,7 +89,7 @@ export default function StressChart() {
       <span className={styles.p1}>놈음</span>
       <span className={styles.p2}>낮음</span>
       <LineChart
-        width={580}
+        width={450}
         height={460}
         data={data}
         margin={{

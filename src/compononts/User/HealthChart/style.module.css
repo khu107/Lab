@@ -1,13 +1,9 @@
 .body {
   display: flex;
 }
-.nav{
-  
-  
-}
-.item{
+
+.item {
   font-size: 23px;
   font-weight: bold;
   padding-left: 100px;
-  
 }

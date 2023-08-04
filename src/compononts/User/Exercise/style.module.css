@@ -14,10 +14,10 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 .shimbak {
-  width: 500px;
+  width: 400px;
 }
 .calorie {
-  width: 500px;
+  width: 400px;
 }
 .calorie h6 {
   text-align: center;

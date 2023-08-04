@@ -59,7 +59,6 @@ export default function User() {
               detailButtonText="상세보기"
               title={user.health.title}
               onDetailButtonClick={() => {
-                console.log('?');
                 setHealthchat(true);
               }}
               body={

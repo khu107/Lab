@@ -12,7 +12,7 @@ function HealthChart({ visibe, onClose }) {
   return (
     <Modal
       className={styles.main}
-      width={1800}
+      width={1500}
       title="기초 건강 관리 상태"
       visible={visibe}
       onCancel={onClose}
